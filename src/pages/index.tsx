@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image'
 import { FiGithub } from 'react-icons/fi';
+import { Weight } from 'lucide-react';
 
 
 
@@ -101,6 +102,8 @@ const Home: React.FC<HomeProps> = ({ data }) => {
   }
 
 
+
+
   return (
     <div className="container">
       <Head>
@@ -136,7 +139,19 @@ const Home: React.FC<HomeProps> = ({ data }) => {
 
         <form className="search" onSubmit={handleOnSubmitSearch}>
           <input name="query" type="search" />
-          <button>Search</button>
+          <button
+            style={{
+              backgroundColor: '#0070f3',
+              color: '#ffffff',
+              padding: '0.5em 1em',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: 'pointer',
+              fontSize: '1rem',
+              marginRight: '0.5em',
+            }}>
+            Search
+          </button>
         </form>
 
 
@@ -196,7 +211,16 @@ const Home: React.FC<HomeProps> = ({ data }) => {
         </ul>
 
         <p>
-          <button onClick={handleLoadMore}>Load More</button>
+          <button style={{
+            backgroundColor: '#0070f3',
+            color: '#ffffff',
+            padding: '0.5em 1em',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontSize: '1rem',
+            marginRight: '0.5em',
+          }} onClick={handleLoadMore}>Load More</button>
         </p>
       </main >
 
@@ -379,20 +403,36 @@ const Home: React.FC<HomeProps> = ({ data }) => {
           }
         }
 
-        .search input {
-          margin-right: .5em;
+        .search {
+          display: flex;
+          align-items: center;
         }
-
+        
+        .search input {
+          margin-right: 0.5em;
+          margin:1.5em
+          width: 100%;
+          height:2.0rem
+        }
+        
+        .search button {
+          width: 40%;
+          font-size: 1.5em;
+        }
+        
         @media (max-width: 600px) {
-          .search input {
-            margin-right: 0;
-            margin-bottom: .5em;
+          .search {
+            flex-direction: column;
           }
-
+        
           .search input,
           .search button {
             width: 100%;
+            margin-right: 0;
+            margin-bottom: 0.5em;
           }
+        }
+          
         }
       `}</style>
 
