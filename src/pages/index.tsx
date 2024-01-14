@@ -118,7 +118,7 @@ const Home: React.FC<HomeProps> = ({ data }) => {
           whileHover={{
             position: 'relative',
             zIndex: 1,
-            background: 'white',
+            background: [28, 134, 238],
             scale: [1, 1.4, 1.2],
             rotate: [0, 10, -10, 0],
             filter: [
@@ -167,7 +167,7 @@ const Home: React.FC<HomeProps> = ({ data }) => {
                 whileHover={{
                   position: 'relative',
                   zIndex: 1,
-                  background: 'white',
+                  background: [28, 134, 238],
                   scale: [1, 1.4, 1.2],
                   rotate: [0, 10, -10, 0],
                   filter: [

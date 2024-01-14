@@ -60,7 +60,7 @@ const EpisodeDetail = ({ episode, characters }) => {
                   whileHover={{
                     position: 'relative',
                     zIndex: 1,
-                    background: 'white',
+                    background: [99, 184, 255],
                     scale: [1, 1.4, 1.2],
                     rotate: [0, 1, -1, 0],
                     filter: [
